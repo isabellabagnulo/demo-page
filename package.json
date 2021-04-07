@@ -11,9 +11,7 @@
     "prebuild": "rm -rf /dist",
     "build": "webpack",
     "copy": "cp ./src/CNAME ./dist/CNAME",
-    "ghpages": "gh-pages -d ./dist",
-    "postbuild": "npm run copy",
-    "postcopy": "npm run ghpages"
+    "ghpages": "gh-pages -d ./dist"
   },
   "devDependencies": {
     "css-loader": "5.1.3",
