@@ -8,8 +8,12 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --hot",
+    "prebuild": "rm -rf /dist",
     "build": "webpack",
-    "gh:pages": "npm run build && gh-pages -d ./dist"
+    "copy": "cp ./src/CNAME ./dist/CNAME",
+    "ghpages": "gh-pages -d ./dist",
+    "postbuild": "npm run copy",
+    "postcopy": "npm run ghpages"
   },
   "devDependencies": {
     "css-loader": "5.1.3",
